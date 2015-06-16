@@ -13,8 +13,11 @@ large number of interactions then the STITCH-based interactions dataset should
 be preferred. 
 
 The stats for the two databases are as follows:
-DrugBank(v4.1) has 15120 links between 7740 drugs and 4103 proteins
-STITCH(v4.0) has 4523609 links between 141799 drugs and 19488 human proteins
+
+| Dataset | No of Drugs    | No of Proteins | No of Interactions |
+| --------|---------|-------|------|
+| DrugBank (v4.1)  | 7,740   | 4,103    | 15,120 |
+| STITCH (v4.0; human) | 141,799 | 19,488 | 4,523,609 |
 
 To use the toolkit, the users must first make sure they have the following
 dependencies: 
