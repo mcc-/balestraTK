@@ -1,12 +1,10 @@
-BalestraTK
+BalestraTK: Balestra ToolKit
 ==========
-
-Balestra ToolKit
 
 Parser for drug-target interaction related databases.
 There are two main uses of BalestraTK: 
-1) to parse DrugBank
-2) to parse STITCH-UniProt-PubChem data
+1. To parse DrugBank
+2. To parse STITCH-UniProt-PubChem data
 
 If the user prefers a small but more richly annotated set of interactions,
 drugs and targets then DrugBank should be preferred. If the user prefers a
@@ -39,7 +37,7 @@ that the redistribution of DrugBank v4.1 data is not allowed. After
 downloading, the data of DrugBank v4.1 can be processed by BalestraTK simply by
 pointing to the folder with the data. 
 
-'''python
+```python
 from balestratk.drugbank import *
 db = DrugBank('/folder/with/drugbank/data/') #Folder where you keep DrugBank data
 print db['aspirin'].synonyms # prints synonyms of aspirin in DrugBank
@@ -62,7 +60,7 @@ for d in db.iterDrugs():
 for d in approved_drugs:
     if getAttr(d, 'targets', None): #necessary as some drugs have no targets
         print d.targets 
-'''
+```
 
 To use the toolkit to access STITCH data, the user must simply point at the
 folder where they would like to keep the STITCH data. If this folder already
@@ -70,7 +68,7 @@ has the STITCH files, the code uses those. If not, then the necessary files are
 automatically retrieved. This is because STITCH license, at the time of
 writing, is permissive to this type of access. The usage style is exactly as above:
 
-'''python
+```python
 from balestratk.stitch import *
 st = STITCH('/folder/with/stitch/data/') #Folder where you keep STITCH data
 c = st['aspirin'] # automatically retrieves corresponding record in O(1) time
@@ -86,4 +84,4 @@ for intr in STITCH.iter_prot_intr(p):
 # Likewise all the interactions in STITCH can be iterated over as follows
 for intr in STITCH.iter_intr():
     print intr
-'''
+```
