@@ -3,6 +3,7 @@ BalestraTK: Balestra ToolKit
 
 Parser for drug-target interaction related databases.
 There are two main uses of BalestraTK: 
+
 1. To parse DrugBank
 2. To parse STITCH-UniProt-PubChem data
 
